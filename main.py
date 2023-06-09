@@ -1,5 +1,7 @@
 from time import sleep
 from poke import *
+
+
 from os import system
 
 system('cls')
@@ -9,10 +11,17 @@ nome = input('Qual o seu nome?: ').title().strip()
 
 print(f"Ah! Como vai \033[1;33m{nome}\033[m" )
 sleep(1)
-print("Você vai precisar de um pokemon se quiser sobreviver",end='')
-for c in range(0,3):
-    sleep(0.6)
-    print(".",end='')
+print("Você vai precisar de um pokemon se quiser sobreviver")
+print(".")
+sleep(0.6)
+print(".")
+sleep(0.8)
+print(".")
+sleep(1.5)
+print('\n!')
+sleep(0.5)
+    
+   
 print("\nAH")
 sleep(0.4)
 print("JÁ")
