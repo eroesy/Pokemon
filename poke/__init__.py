@@ -1,5 +1,9 @@
 from time import sleep
 
+from os import system
+
+
+
 def cores(cor='clear'):
 
     dic ={
@@ -91,9 +95,9 @@ def mapas(mapa= 'floresta'):
     mapas = {
         'floresta': f'A{cores("verd")} floresta {cores()}cheia de pokemons maravilhosos. Um otimo lugar para um noob!\nDifilcudade: {cores("azul")} FACIL {cores()}',
         'montanha': f'A {cores("yell")}MONTANHA{cores()} Lar de pokemons pedras e voadores extraordinarios,Cuidado com os {cores("roxo")}"Cães"{cores()}.\nDifilcudade: {cores("azul2")}MEDIA {cores()}',
-        'deserto': f'O{cores("yell")}DESERTO{cores("clear")}, Casa dos pokemons nordestinos, secas e vento forte são do contidiano dos moradores({cores("roxo")}VEM PRO NORDESTE MADONA({cores()})).\nDifilcudade: {cores("red")}DIFICIL{cores()}',
-        'HELL': f'O {cores("roxo")}Lugar assombradooooo{cores("clear")}\n\n"Se você ja morreu alguma vez sua alma não me pertence"\n {cores("red")}                                        - O tinhoso xxx\n\n{cores("clear")}\nDifilcudade: {cores("red")}VOCê JA ESTA MORTO, NÃO TEM COMO PIORAR ><.{cores()}',
-        'DREAMCORE': f'{cores("reverse")}Como aliviar sua dor, ficar no Dreamcore?{cores("clear")}(Não a Informação do local OBS: {cores("red")}NIGUEM NUNCA VOLTOU!!!!){cores("clear")}\nDifilcudade: {cores("reverse")}Talvez não seja tão ruim assim?{cores()}'}
+        'deserto': f'O {cores("red")}DESERTO{cores("clear")}, Casa dos pokemons nordestinos, secas e vento forte são do contidiano dos moradores({cores("roxo")}VEM PRO NORDESTE MADONA{cores()}).\nDifilcudade: {cores("red")}DIFICIL{cores()}',
+        'hell': f'O {cores("roxo")}Lugar assombradooooo{cores("clear")}\n\n"Se você ja morreu alguma vez sua alma não me pertence"\n\n {cores("red")}                                        - O Tinhoso xxx\n\n{cores("clear")}\nDifilcudade: {cores("red")}VOCê JA ESTA MORTO, NÃO TEM COMO PIORAR ><.{cores()}',
+        'dreamcore': f'{cores("reverse")}Como aliviar sua dor, ficar no Dreamcore?{cores("clear")}(Não a Informação do local OBS: {cores("red")}NIGUEM NUNCA VOLTOU!!!!){cores("clear")}\nDifilcudade: {cores("reverse")}Talvez não seja tão ruim assim?{cores()}'}
 
     for i in mapas[mapa]:
         print(i,end="")
@@ -103,9 +107,57 @@ def mapas(mapa= 'floresta'):
 
 def aventura(local='floresta'):
     print('Voce finalmente esta pronto(a) para começar a sua AVENTURA!')
-    print('Escolha um lugar para começar: ')
-    mapas()
+    sleep(0.3)
+    print(f'''
     
+        [ 1 ] {cores('verd')}FLORESTA{cores()}
+        [ 2 ] {cores('yell')}MONTANHA{cores()}
+        [ 3 ] {cores('red')}DESERTO{cores()}
+        [ 4 ] {cores('roxo')}HELL{cores()}
+        [ 5 ] {cores('reverse')}DREAMCORE{cores()}
+    
+    
+    ''')
+    while True:
+        while True:
+            num = ler(texto='Escolha um lugar para começar: ', modo='int')
+           
+            if num == 1:
+                local = 'floresta'
+                break
+            elif num == 2:
+                local = 'montanha'
+                break
+            elif num == 3:
+                local = 'deserto'
+                break
+            elif num == 4:
+                local = 'hell'
+                break
+            elif num == 5:
+                local = 'dreamcore'
+                break
+           
+            
+           
+            
+            print(f'{cores("red")}Somente as opçôes mostradas estão validas!{cores()}')
+        mapas(local)
+        resp = ler('\nVai esse msm?[S/N]: ', modo='string').upper()
+        system('cls')
+        print(f'''
+
+    [ 1 ] {cores('verd')}FLORESTA{cores()}
+    [ 2 ] {cores('yell')}MONTANHA{cores()}
+    [ 3 ] {cores('red')}DESERTO{cores()}
+    [ 4 ] {cores('roxo')}HELL{cores()}
+    [ 5 ] {cores('reverse')}DREAMCORE{cores()}
+
+
+''')
+        if resp[0] =='S':
+            break
+
 
     
 def iniciais():
@@ -136,14 +188,15 @@ def iniciais():
         print(f'Você escolheu {pokemons(inic[opç])}')
         
         dados(inic[opç])
-        resp = ler('Vai esse msm?[S/N]: ', modo='string').upper()
+        resp = ler('\nVai esse msm?[S/N]: ', modo='string').upper()
         if resp[0] =='S':
             break
        
         
-    
+            
     print('OK.')
     aventura()
+    print('OK.')
        
    
-mapas('HELL')
+aventura()
