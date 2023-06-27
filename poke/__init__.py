@@ -106,20 +106,24 @@ def mapas(mapa= 'floresta'):
     
 
 def aventura(local='floresta'):
+    
     print('Voce finalmente esta pronto(a) para começar a sua AVENTURA!')
     sleep(0.3)
-    print(f'''
-    
+  
+    while True:
+        system('cls')
+        print(f'''
+
         [ 1 ] {cores('verd')}FLORESTA{cores()}
         [ 2 ] {cores('yell')}MONTANHA{cores()}
         [ 3 ] {cores('red')}DESERTO{cores()}
         [ 4 ] {cores('roxo')}HELL{cores()}
         [ 5 ] {cores('reverse')}DREAMCORE{cores()}
-    
-    
+
+
     ''')
-    while True:
         while True:
+            
             num = ler(texto='Escolha um lugar para começar: ', modo='int')
            
             if num == 1:
@@ -198,5 +202,5 @@ def iniciais():
     aventura()
     print('OK.')
        
-   
 aventura()
+   
