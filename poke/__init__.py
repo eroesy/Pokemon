@@ -95,7 +95,7 @@ def mapas(mapa= 'floresta'):
     mapas = {
         'floresta': f'A{cores("verd")} floresta {cores()}cheia de pokemons maravilhosos. Um otimo lugar para um noob!\nDifilcudade: {cores("azul")} FACIL {cores()}',
         'montanha': f'A {cores("yell")}MONTANHA{cores()} Lar de pokemons pedras e voadores extraordinarios,Cuidado com os {cores("roxo")}"Cães"{cores()}.\nDifilcudade: {cores("azul2")}MEDIA {cores()}',
-        'deserto': f'O {cores("red")}DESERTO{cores("clear")}, Casa dos pokemons nordestinos, secas e vento forte são do contidiano dos moradores({cores("roxo")}VEM PRO NORDESTE MADONA{cores()}).\nDifilcudade: {cores("red")}DIFICIL{cores()}',
+        'deserto': f'O {cores("red")}DESERTO{cores("clear")}, Casa dos pokemons nordestinos, secas e vento forte são do contidiano dos moradores({cores("roxo")}VEM PRO NORDESTE VIRGINGOD{cores()}).\nDifilcudade: {cores("red")}DIFICIL{cores()}',
         'hell': f'O {cores("roxo")}Lugar assombradooooo{cores("clear")}\n\n"Se você ja morreu alguma vez sua alma não me pertence"\n\n {cores("red")}                                        - O Tinhoso xxx\n\n{cores("clear")}\nDifilcudade: {cores("red")}VOCê JA ESTA MORTO, NÃO TEM COMO PIORAR ><.{cores()}',
         'dreamcore': f'{cores("reverse")}Como aliviar sua dor, ficar no Dreamcore?{cores("clear")}(Não a Informação do local OBS: {cores("red")}NIGUEM NUNCA VOLTOU!!!!){cores("clear")}\nDifilcudade: {cores("reverse")}Talvez não seja tão ruim assim?{cores()}'}
 
@@ -202,5 +202,5 @@ def iniciais():
     aventura()
     print('OK.')
        
-aventura()
+
    
